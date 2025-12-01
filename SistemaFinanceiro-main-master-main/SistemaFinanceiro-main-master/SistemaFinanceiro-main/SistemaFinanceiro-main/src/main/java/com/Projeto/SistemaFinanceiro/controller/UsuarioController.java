@@ -1,5 +1,6 @@
 package com.Projeto.SistemaFinanceiro.controller;
 
+import com.Projeto.SistemaFinanceiro.domain.cadastro.Service.UsuarioService;
 import com.Projeto.SistemaFinanceiro.domain.cadastro.DadosCadastroUsuario;
 import com.Projeto.SistemaFinanceiro.domain.detalhamento.DadosDetalhamentoUsuario;
 import com.Projeto.SistemaFinanceiro.domain.usuario.Usuario;
@@ -20,6 +21,9 @@ public class UsuarioController {
 
     @Autowired
     private UsuarioRepository repository;
+
+    @Autowired
+    private UsuarioService usuarioService;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
