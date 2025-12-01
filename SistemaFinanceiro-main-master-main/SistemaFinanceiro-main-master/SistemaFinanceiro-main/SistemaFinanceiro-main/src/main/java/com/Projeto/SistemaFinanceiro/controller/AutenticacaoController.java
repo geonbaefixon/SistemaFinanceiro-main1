@@ -4,6 +4,7 @@ import com.Projeto.SistemaFinanceiro.domain.usuario.DadosAutenticacao;
 import com.Projeto.SistemaFinanceiro.domain.usuario.Usuario;
 import com.Projeto.SistemaFinanceiro.infra.security.DadosTokenJWT;
 import com.Projeto.SistemaFinanceiro.infra.security.TokenService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -29,10 +30,10 @@ public class AutenticacaoController {
         var authenticationToken = new UsernamePasswordAuthenticationToken
                 (dados.login(), dados.senha());
         var authentication = manager.authenticate(authenticationToken);
-        var tokenJWT = tokenService.gerarToken((Usuario) authentication.getPrincipal());
+        var tokenJTW = tokenService.gerarToken((Usuario) authentication.getPrincipal());
 
 
-        return ResponseEntity.ok(new DadosTokenJWT(tokenJWT));
+        return ResponseEntity.ok(new DadosTokenJWT(tokenJTW));
 
 
     }

@@ -47,11 +47,11 @@ public class CategoriaController {
         return ResponseEntity.ok(page);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Categoria> buscarCategoriaPorId(@PathVariable Long id) {
-        Optional<Categoria> categoria = categoriaRepository.findById(id);
-        return categoria.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
-    }
+   // @GetMapping("/{id}")
+    //public ResponseEntity<Categoria> buscarCategoriaPorId(@PathVariable Long id) {
+     //   Optional<Categoria> categoria = categoriaRepository.findById(id);
+//        return categoria.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+//}
 
     @PutMapping("/{id}")
     @Transactional
