@@ -5,7 +5,7 @@ import com.Projeto.SistemaFinanceiro.domain.cadastro.DadosCadastroUsuario;
 import com.Projeto.SistemaFinanceiro.domain.detalhamento.DadosDetalhamentoUsuario;
 import com.Projeto.SistemaFinanceiro.domain.usuario.Usuario;
 import com.Projeto.SistemaFinanceiro.domain.usuario.UsuarioRepository;
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import org.springframework.web.bind.annotation.RequestBody;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
